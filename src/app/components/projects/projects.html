@@ -1,0 +1,27 @@
+<section class="projects-section">
+  <h2>Projek-Projek Saya</h2>
+  <div class="projects-grid">
+    <div *ngFor="let project of projects" class="project-card fade-in-element" appScrollFadeIn>
+      
+      <!-- Gunakan binding alt yang betul -->
+      <img 
+        [src]="project.imageUrl" 
+        [alt]="project.name" 
+        class="project-image"
+      />
+
+      <div class="project-content">
+        <h3 class="project-name">{{ project.name }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        
+        <div class="project-tech">
+          <span 
+            *ngFor="let tech of project.technologies" 
+            class="tech-tag">
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

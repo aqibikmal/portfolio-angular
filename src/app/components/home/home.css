@@ -1,0 +1,24 @@
+/* Styling untuk keseluruhan seksyen 'hero' */
+.hero {
+  display: flex;
+  flex-direction: column; /* Susun item secara menegak */
+  justify-content: center; /* Letak di tengah secara menegak */
+  align-items: center; /* Letak di tengah secara melintang */
+  text-align: center;
+  padding: 6rem 2rem; /* Ruang di dalam seksyen */
+  background-color: #ffffff;
+}
+
+/* Styling untuk tajuk utama */
+.hero h1 {
+  font-size: 3rem; /* Saiz fon yang besar */
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+/* Styling untuk perenggan */
+.hero p {
+  font-size: 1.25rem;
+  color: #6c757d;
+  max-width: 600px; /* Hadkan lebar teks supaya mudah dibaca */
+}

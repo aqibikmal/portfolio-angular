@@ -1,0 +1,30 @@
+/* Styling untuk keseluruhan header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Styling untuk logo atau nama awak */
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Styling untuk pautan navigasi */
+.main-nav a {
+  margin-left: 1.5rem; /* <-- Ini yang akan menambah jarak */
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Efek bila mouse berada di atas pautan */
+.main-nav a:hover {
+  color: #007bff;
+}

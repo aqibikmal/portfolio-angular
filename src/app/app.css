@@ -1,0 +1,13 @@
+/* Lokasi: src/app/app.css */
+
+/* :host merujuk kepada komponen ini sendiri, iaitu <app-root> */
+:host {
+  display: flex;
+  flex-direction: column; /* Susun item secara menegak */
+  min-height: 100vh; /* Set ketinggian minimum sebagai 100% ketinggian viewport */
+}
+
+/* Ini akan 'menolak' footer ke bawah */
+main {
+  flex: 1; /* Suruh bahagian 'main' membesar dan isi ruang kosong */
+}

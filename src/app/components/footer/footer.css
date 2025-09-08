@@ -1,0 +1,11 @@
+.main-footer {
+  padding: 2rem;
+  background-color: #343a40; /* Warna gelap */
+  color: #f8f9fa; /* Warna teks cerah */
+  text-align: center;
+  margin-top: auto; /* Pastikan footer sentiasa di bahagian bawah */
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}

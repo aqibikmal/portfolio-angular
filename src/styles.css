@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/* Lokasi: src/styles.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* Tambah fon asas untuk keseluruhan laman */
+}
+
+/* Kelas untuk elemen yang kita nak animasikan */
+.fade-in-element {
+  opacity: 0; /* Mula dengan lutsinar (tak nampak) */
+  transform: translateY(30px); /* Mula sedikit ke bawah */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Efek transisi yang lancar */
+}
+
+/* Kelas yang akan ditambah apabila elemen masuk ke skrin */
+.fade-in-element.is-visible {
+  opacity: 1; /* Jadi nampak sepenuhnya */
+  transform: translateY(0); /* Kembali ke posisi asal */
+}
