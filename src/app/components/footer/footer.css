@@ -1,11 +1,35 @@
 .main-footer {
   padding: 2rem;
-  background-color: #343a40; /* Warna gelap */
-  color: #f8f9fa; /* Warna teks cerah */
-  text-align: center;
-  margin-top: auto; /* Pastikan footer sentiasa di bahagian bawah */
+  background-color: #343a40;
+  color: #adb5bd; /* Warna teks yang lebih lembut */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Letak di tengah */
+  display: flex;
+  justify-content: space-between; /* Letak item di hujung kiri dan kanan */
+  align-items: center; /* Jajarkan item secara menegak */
 }
 
 .footer-text {
   font-size: 0.9rem;
+  margin: 0; /* Padam margin lalai */
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem; /* Jarak antara ikon */
+}
+
+.social-links a {
+  color: #adb5bd;
+  text-decoration: none;
+  font-size: 1.5rem; /* Saiz ikon */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff; /* Tukar warna bila mouse hover */
+  transform: translateY(-3px); /* Angkat ikon sedikit */
 }

@@ -1,14 +1,30 @@
-/* Styling untuk keseluruhan header */
+/* :host merujuk kepada elemen <app-header> itu sendiri */
+:host {
+  /* Ini menjadikan header 'melekat' di bahagian atas skrin */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Pastikan ia sentiasa di atas kandungan lain */
+}
+
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 2.5rem; /* Tambah sedikit ruang */
+  
+  /* Efek "Frosted Glass" */
+  background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih separa lutsinar */
+  backdrop-filter: blur(10px); /* Ini yang membuatkan kandungan di belakangnya kabur */
+  -webkit-backdrop-filter: blur(10px); /* Untuk sokongan pelayar web Safari */
+  
+  /* Bayang-bayang lembut untuk efek 'terapung' */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
+  /* Transisi untuk efek yang lebih lancar */
+  transition: all 0.3s ease;
 }
 
-/* Styling untuk logo atau nama awak */
 .logo a {
   font-weight: bold;
   font-size: 1.5rem;
@@ -16,15 +32,28 @@
   text-decoration: none;
 }
 
-/* Styling untuk pautan navigasi */
 .main-nav a {
-  margin-left: 1.5rem; /* <-- Ini yang akan menambah jarak */
-  color: #555;
+  margin-left: 2rem; /* Jarakkan lagi pautan */
+  color: #333; /* Gelapkan sedikit teks untuk kontras */
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 500; /* Sedikit tebal */
+  position: relative;
+  padding-bottom: 5px; /* Ruang untuk garisan bawah */
 }
 
-/* Efek bila mouse berada di atas pautan */
-.main-nav a:hover {
-  color: #007bff;
+/* Efek garisan bawah moden apabila mouse hover */
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
