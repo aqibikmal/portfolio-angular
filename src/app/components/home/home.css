@@ -1,32 +1,32 @@
-/* Styling untuk keseluruhan seksyen 'hero' */
+/* Bahagian Hero */
 .hero {
   display: flex;
-  flex-direction: column; /* Susun item secara menegak */
-  justify-content: center; /* Letak di tengah secara menegak */
-  align-items: center; /* Letak di tengah secara melintang */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 6rem 2rem; /* Ruang di dalam seksyen */
-  background-color: #ffffff;
+  padding: 8rem 2rem;
+  background-color: #121212;
 }
 
-/* Styling untuk tajuk utama */
 .hero h1 {
-  font-size: 3rem; /* Saiz fon yang besar */
+  font-size: 3.5rem;
+  font-weight: bold;
   margin-bottom: 1rem;
-  color: #343a40;
 }
 
-/* Styling untuk perenggan */
 .hero p {
   font-size: 1.25rem;
-  color: #6c757d;
-  max-width: 600px; /* Hadkan lebar teks supaya mudah dibaca */
+  color: #a0a0a0;
+  max-width: 600px;
 }
 
-/* Pengenalan Diri */
+/* Bahagian Pengenalan Diri */
 .intro-section {
-  background-color: #f8f9fa; /* Warna latar belakang lembut */
+  background-color: #1a1a1a;
   padding: 5rem 2rem;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 .intro-container {
@@ -45,39 +45,42 @@
 .intro-image img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .intro-text h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .intro-text p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #6c757d;
+  color: #a0a0a0;
   margin-bottom: 2rem;
 }
 
 .btn {
-  background-color: #343a40;
+  background-color: #7B2CBF;
   color: #ffffff;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 2rem;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #495057;
+  background-color: #9D4EDD;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(123, 44, 191, 0.4);
 }
 
-/* Projek Pilihan */
+/* Projek Pilihan (Featured Projects) */
 .featured-projects-section {
   padding: 5rem 2rem;
   text-align: center;
+  background-color: #121212; /* Latar belakang sama dengan hero */
 }
 
 .featured-projects-section h2 {
@@ -88,7 +91,7 @@
 .projects-preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -97,14 +100,15 @@
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   color: white;
   text-decoration: none;
+  height: 350px; /* Tetapkan ketinggian yang konsisten */
 }
 
 .project-preview-card img {
   width: 100%;
-  height: 350px;
+  height: 100%; /* Pastikan gambar memenuhi kad */
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -120,10 +124,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+.project-preview-card:hover .card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(123, 44, 191, 0.2));
 }
 
 .card-overlay h3 {

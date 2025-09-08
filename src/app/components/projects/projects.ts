@@ -17,21 +17,21 @@ export class ProjectsComponent {
   projects = [
     {
       imageUrl: 'assets/images/project1.jpeg',
-      name: 'Sistem E-dagang Klien',
-      description: 'Membangunkan platform e-dagang yang lengkap dengan sistem pembayaran dan pengurusan inventori untuk klien XYZ.',
-      technologies: ['Angular', 'Firebase', 'Stripe']
+      name: 'Mobile Apps',
+      description: 'Developed modern cross-platform mobile apps with authentication, push notifications, and real-time API integrations.',
+      technologies: ['Flutter', 'Dart', 'Firebase', 'REST APIs']
     },
     {
       imageUrl: 'assets/images/project2.jpeg',
-      name: 'Aplikasi Penjejak Cuaca',
-      description: 'Aplikasi web peribadi untuk memaparkan data cuaca masa nyata menggunakan API awam.',
-      technologies: ['Angular', 'TypeScript', 'Weather API']
+      name: 'Player & Coaches Contract System',
+      description: 'Built a secure, server-rendered Laravel application to manage personal data and contracts for players and coaches, including role-based access control, document uploads, audit logs, and automated contract-renewal reminders',
+      technologies: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Eloquent ORM', 'Laravel Scheduler']
     },
     {
       imageUrl: 'assets/images/project3.jpeg',
-      name: 'Laman Web Portfolio (Ini!)',
-      description: 'Membina laman web portfolio peribadi dari awal untuk mempamerkan kemahiran dan projek-projek saya.',
-      technologies: ['Angular', 'CSS Flexbox']
+      name: 'This Portfolio Website',
+      description: 'Built a personal portfolio website from scratch to showcase my skills and projects deployed on Vercel with fast global delivery and automatic deployments from Git.',
+      technologies: ['Angular', 'TypeScript', 'CSS Flexbox', 'Responsive Design', 'Vercel']
     }
   ];
 }

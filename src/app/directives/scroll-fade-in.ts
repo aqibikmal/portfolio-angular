@@ -1,34 +1,35 @@
-import { Directive, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Directive, ElementRef, Inject, PLATFORM_ID, AfterViewInit, OnDestroy } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common'; // Import isPlatformBrowser
 
 @Directive({
   selector: '[appScrollFadeIn]',
   standalone: true
 })
-export class ScrollFadeInDirective implements OnInit, OnDestroy {
+export class ScrollFadeInDirective implements AfterViewInit, OnDestroy {
   private observer: IntersectionObserver | null = null;
 
-  constructor(private el: ElementRef) {}
+  // Inject PLATFORM_ID untuk memeriksa platform
+  constructor(private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
-  ngOnInit() {
-    this.observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Tambah kelas 'is-visible' bila elemen masuk ke skrin
-          this.el.nativeElement.classList.add('is-visible');
-          // Hentikan pemerhatian selepas animasi berlaku sekali
-          this.observer?.unobserve(this.el.nativeElement);
-        }
+  ngAfterViewInit() {
+    // Hanya jalankan kod ini jika platform adalah pelayar web
+    if (isPlatformBrowser(this.platformId)) {
+      this.observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.el.nativeElement.classList.add('is-visible');
+            this.observer?.unobserve(this.el.nativeElement);
+          }
+        });
+      }, {
+        threshold: 0.1
       });
-    }, {
-      threshold: 0.1 // Cetuskan bila 10% elemen kelihatan
-    });
 
-    // Mula memerhati elemen ini
-    this.observer.observe(this.el.nativeElement);
+      this.observer.observe(this.el.nativeElement);
+    }
   }
 
   ngOnDestroy() {
-    // Hentikan pemerhatian bila komponen dimusnahkan (amalan terbaik)
     if (this.observer) {
       this.observer.disconnect();
     }

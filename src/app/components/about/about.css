@@ -1,6 +1,8 @@
+
+
 .about-section {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
+  padding: 5rem 2rem;
+   background-color: #121212; /* Guna warna latar yang sama */
 }
 
 .about-container {
@@ -9,7 +11,12 @@
   display: flex;
   align-items: center;
   gap: 3rem;
+  background-color: #242424; /* Warna kad kandungan */
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid #333;
 }
+/* ... Baki kod CSS awak untuk about-content, skills, dll. dikekalkan ... */
 
 .about-image {
   flex-basis: 300px;
@@ -18,9 +25,8 @@
 
 .about-image img {
   width: 100%;
-  /* border-radius: 50%; Jadikan gambar bulat */
-  border-radius: 8px; /* <-- Pilihan: Boleh tambah sedikit lengkungan di hujung */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .about-content {
@@ -30,12 +36,13 @@
 .about-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--color-text-light);
 }
 
 .about-content p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #6c757d;
+  color: var(--color-text-muted);
   margin-bottom: 1rem;
 }
 
@@ -43,6 +50,7 @@
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  color: var(--color-text-light);
 }
 
 .skills-list {
@@ -52,8 +60,8 @@
 }
 
 .skill-tag {
-  background-color: #e9ecef;
-  color: #495057;
+  background-color: var(--color-dark-lighter); /* Latar belakang tag gelap */
+  color: var(--color-purple-accent); /* Teks tag ungu */
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;

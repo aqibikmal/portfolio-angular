@@ -1,35 +1,36 @@
 .main-footer {
-  padding: 2rem;
-  background-color: #343a40;
-  color: #adb5bd; /* Warna teks yang lebih lembut */
+  padding: 2.5rem 2rem; /* Tambah sedikit ruang */
+  background-color: #121212; /* Warna hitam pekat, sama dengan hero */
+  border-top: 1px solid #333; /* Garisan pemisah lembut */
 }
 
 .footer-container {
   max-width: 1200px;
-  margin: 0 auto; /* Letak di tengah */
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Letak item di hujung kiri dan kanan */
-  align-items: center; /* Jajarkan item secara menegak */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-text {
   font-size: 0.9rem;
-  margin: 0; /* Padam margin lalai */
+  color: #a0a0a0; /* Teks kelabu lembut */
+  margin: 0;
 }
 
 .social-links {
   display: flex;
-  gap: 1.5rem; /* Jarak antara ikon */
+  gap: 1.5rem;
 }
 
 .social-links a {
-  color: #adb5bd;
+  color: #a0a0a0; /* Ikon kelabu lembut */
   text-decoration: none;
-  font-size: 1.5rem; /* Saiz ikon */
+  font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #ffffff; /* Tukar warna bila mouse hover */
-  transform: translateY(-3px); /* Angkat ikon sedikit */
+  color: #9D4EDD; /* Ikon ungu terang bila hover */
+  transform: translateY(-3px);
 }

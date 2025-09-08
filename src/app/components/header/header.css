@@ -1,48 +1,65 @@
-/* :host merujuk kepada elemen <app-header> itu sendiri */
 :host {
-  /* Ini menjadikan header 'melekat' di bahagian atas skrin */
-  position: sticky;
+  position: fixed; /* Tukar dari sticky kepada fixed */
   top: 0;
-  z-index: 1000; /* Pastikan ia sentiasa di atas kandungan lain */
+  left: 0; /* Tambah left: 0 */
+  width: 100%; /* Tambah width: 100% */
+  z-index: 1000;
+  transition: background-color 0.4s ease; /* Transisi untuk warna latar */
+}
+
+/* Keadaan header bila berada di atas (scroll = 0) */
+:host:not(.header-scrolled) .main-header {
+  background-color: rgba(44, 44, 77, 0.9); /* Ungu gelap seperti sebelum ini */
+  border-bottom: 1px solid #2c2c4d;
+}
+
+/* Keadaan header bila dah skrol ke bawah */
+:host.header-scrolled .main-header {
+  background-color: transparent; /* Jadi lutsinar sepenuhnya */
+  box-shadow: none; /* Buang bayang-bayang */
+  border-bottom-color: transparent; /* Buang garisan bawah */
 }
 
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2.5rem; /* Tambah sedikit ruang */
-  
-  /* Efek "Frosted Glass" */
-  background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih separa lutsinar */
-  backdrop-filter: blur(10px); /* Ini yang membuatkan kandungan di belakangnya kabur */
-  -webkit-backdrop-filter: blur(10px); /* Untuk sokongan pelayar web Safari */
-  
-  /* Bayang-bayang lembut untuk efek 'terapung' */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  
-  /* Transisi untuk efek yang lebih lancar */
-  transition: all 0.3s ease;
+  padding: 1rem 2.5rem;
+  transition: all 0.4s ease; /* Perlahankan semua transisi */
 }
 
+/* Logo & Pautan Navigasi */
+.logo a, .main-nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: opacity 0.4s ease; /* Transisi untuk opacity */
+}
+
+/* Kurangkan kelegapan tulisan bila dah skrol */
+:host.header-scrolled .logo a,
+:host.header-scrolled .main-nav a {
+  opacity: 0.7; /* Jadi sedikit lutsinar */
+}
+
+:host.header-scrolled .main-nav a:hover,
+:host.header-scrolled .logo a:hover {
+  opacity: 1; /* Kembali normal bila mouse hover */
+}
+
+/* Baki kod dikekalkan */
 .logo a {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #333;
-  text-decoration: none;
 }
 
 .main-nav a {
-  margin-left: 2rem; /* Jarakkan lagi pautan */
-  color: #333; /* Gelapkan sedikit teks untuk kontras */
-  text-decoration: none;
+  margin-left: 2rem;
   font-size: 1rem;
-  font-weight: 500; /* Sedikit tebal */
+  font-weight: 500;
   position: relative;
-  padding-bottom: 5px; /* Ruang untuk garisan bawah */
+  padding-bottom: 5px;
 }
 
-/* Efek garisan bawah moden apabila mouse hover */
 .main-nav a::after {
   content: '';
   position: absolute;
@@ -50,7 +67,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #007bff;
+  background-color: #9D4EDD;
   transition: width 0.3s ease;
 }
 

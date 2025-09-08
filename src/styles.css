@@ -1,22 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
-/* Lokasi: src/styles.css */
+/* Anda boleh import font di sini jika ingin menggunakan font khusus */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap'); */
 
-html, body {
-  height: 100%;
+:root {
+  /* Warna Tema */
+  --color-dark-background: #1a1a2e; /* Hitam gelap kebiruan */
+  --color-dark-lighter: #2c2c4d; /* Sedikit cerah dari background */
+  --color-purple-accent: #8a48d8; /* Ungu terang untuk aksen */
+  --color-purple-hover: #b366ff; /* Ungu lebih cerah bila hover */
+  --color-text-light: #e0e0e0; /* Teks terang */
+  --color-text-muted: #b0b0d0; /* Teks kurang menonjol */
+}
+
+/* Tetapan Global */
+body {
+  font-family: 'Montserrat', sans-serif; /* Jika guna font Montserrat */
   margin: 0;
-  padding: 0;
-  font-family: sans-serif; /* Tambah fon asas untuk keseluruhan laman */
+  background-color: var(--color-dark-background); /* Latar belakang gelap */
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Tetapan Semula untuk Semua Elemen */
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-light);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 /* Kelas untuk elemen yang kita nak animasikan */
 .fade-in-element {
-  opacity: 0; /* Mula dengan lutsinar (tak nampak) */
-  transform: translateY(30px); /* Mula sedikit ke bawah */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Efek transisi yang lancar */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Kelas yang akan ditambah apabila elemen masuk ke skrin */
 .fade-in-element.is-visible {
-  opacity: 1; /* Jadi nampak sepenuhnya */
-  transform: translateY(0); /* Kembali ke posisi asal */
+  opacity: 1;
+  transform: translateY(0);
 }
