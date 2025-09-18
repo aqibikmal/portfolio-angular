@@ -1,22 +1,27 @@
-
-
+/* Gantikan kod .about-section lama anda dengan yang ini */
 .about-section {
-  padding: 5rem 2rem;
-   background-color: #121212; /* Guna warna latar yang sama */
+  /* --- KOD DIUBAH SUAI UNTUK CENTER --- */
+  display: flex;
+  justify-content: center; /* Tengah secara melintang */
+  align-items: center;     /* Tengah secara menegak */
+  min-height: 90vh;        /* Beri ketinggian minimum pada section */
+  padding: 2rem;           /* Padding diubah suai supaya tidak ganggu centering */
+  background-color: #121212;
 }
 
+
+/* --- KOD DI BAWAH INI TIDAK PERLU DIUBAH --- */
 .about-container {
   max-width: 1000px;
-  margin: 0 auto;
+  /* margin: 0 auto;  <-- Baris ini tidak lagi diperlukan, tetapi boleh dikekalkan */
   display: flex;
   align-items: center;
   gap: 3rem;
-  background-color: #242424; /* Warna kad kandungan */
+  background-color: #242424;
   padding: 3rem;
   border-radius: 12px;
   border: 1px solid #333;
 }
-/* ... Baki kod CSS awak untuk about-content, skills, dll. dikekalkan ... */
 
 .about-image {
   flex-basis: 300px;
@@ -60,8 +65,8 @@
 }
 
 .skill-tag {
-  background-color: var(--color-dark-lighter); /* Latar belakang tag gelap */
-  color: var(--color-purple-accent); /* Teks tag ungu */
+  background-color: var(--color-dark-lighter);
+  color: var(--color-purple-accent);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;

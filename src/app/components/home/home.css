@@ -139,3 +139,35 @@
   font-size: 1.5rem;
   margin: 0;
 }
+
+/* ============================================== */
+/* ===         BAHAGIAN RESPONSIVE            === */
+/* ============================================== */
+
+/* Gunakan stail ini untuk skrin bersaiz tablet dan ke bawah */
+@media (max-width: 992px) {
+
+  /* --- Bahagian Pengenalan Diri --- */
+  .intro-container {
+    /* Tukar susunan dari bersebelahan (row) kepada atas-bawah (column) */
+    flex-direction: column;
+    text-align: center; /* Tengahkankan teks untuk nampak kemas */
+  }
+
+  .intro-image {
+    /* Benarkan gambar memenuhi lebar container supaya tidak terlalu kecil */
+    flex-basis: 100%;
+    max-width: 400px; /* Letak had supaya gambar tidak terlalu besar */
+    margin-bottom: 2rem; /* Tambah jarak antara gambar dan teks di bawahnya */
+  }
+
+  /* --- Bahagian Hero (Penambahbaikan kecil) --- */
+  .hero h1 {
+    /* Kecilkan sedikit saiz font untuk skrin yang lebih kecil */
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}

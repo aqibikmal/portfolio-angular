@@ -15,7 +15,7 @@
 body {
   font-family: 'Montserrat', sans-serif; /* Jika guna font Montserrat */
   margin: 0;
-  background-color: var(--color-dark-background); /* Latar belakang gelap */
+  background-color: #1a1a2e; /* Latar belakang gelap */
   color: #e0e0e0;
   line-height: 1.6;
 }

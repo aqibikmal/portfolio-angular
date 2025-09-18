@@ -1,12 +1,17 @@
-
-
-/* Latar belakang utama untuk seksyen contact */
+/* Gantikan kod .contact-section lama anda dengan yang ini */
 .contact-section {
-  padding: 5rem 2rem;
-  background-color: #121212; /* Guna warna latar yang sama */
-  text-align: center;
+  /* --- KOD DIUBAH SUAI UNTUK CENTER & FULL HEIGHT --- */
+  display: flex;
+  justify-content: center; /* Tengah secara melintang */
+  align-items: center;     /* Tengah secara menegak */
+  min-height: 90vh;        /* Beri ketinggian minimum pada section */
+  padding: 2rem;           /* Padding diubah suai supaya tidak ganggu centering */
+  background-color: #121212;
+  text-align: center;      /* Boleh dikekalkan */
 }
 
+
+/* --- KOD DI BAWAH INI TIDAK PERLU DIUBAH --- */
 .contact-container {
   max-width: 900px;
   margin: 0 auto;
@@ -19,7 +24,7 @@
 
 .contact-container p {
   font-size: 1.1rem;
-  color: #a0a0a0; /* Teks kelabu lembut */
+  color: #a0a0a0;
   margin-bottom: 4rem;
   max-width: 600px;
   margin-left: auto;
@@ -32,27 +37,26 @@
   gap: 2rem;
 }
 
-/* Reka bentuk baru untuk kad contact */
 .contact-card {
-  background-color: #1a1a2e; /* Latar belakang kad, lebih cerah */
+  background-color: #1a1a2e;
   padding: 2.5rem 2rem;
   border-radius: 8px;
-  border: 1px solid #2c2c4d; /* Garisan sempadan lembut */
+  border: 1px solid #2c2c4d;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  color: #e0e0e0; /* Teks terang */
+  color: #e0e0e0;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  border-color: #7B2CBF; /* Tukar warna garisan bila hover */
+  border-color: #7B2CBF;
 }
 
 .contact-card i {
   font-size: 2.5rem;
-  color: #9D4EDD; /* Ikon ungu */
+  color: #9D4EDD;
   margin-bottom: 1rem;
 }
 
@@ -63,6 +67,7 @@
 
 .contact-card p {
   font-size: 1rem;
-  color: #a0a0a0; /* Teks kelabu lembut */
+  color: #a0a0a0;
   margin: 0;
 }
+
